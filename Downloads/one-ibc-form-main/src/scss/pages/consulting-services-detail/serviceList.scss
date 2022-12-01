@@ -1,0 +1,206 @@
+.ibc-services {
+  &__base {
+    position: relative;
+    z-index: 1;
+    // min-height: 2150px;
+  }
+
+  &__wrapper {
+    width: 128rem;
+    padding-left: 8rem;
+  }
+
+  &__content {
+    width: 160rem;
+    position: absolute;
+    top: -13rem;
+    right: 0;
+    background-color: $white;
+    padding-bottom: 60px;
+  }
+
+  &__breadcrumb {
+    margin-top: 2rem;
+  }
+
+  &__detail {
+    height: auto;
+  }
+
+  &__description {
+    // border: 1px solid red;
+    margin-top: 80px;
+    min-height: 500px;
+
+    h1 {
+      background: linear-gradient(225deg, #ff6a00 0%, #ee0979 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      font-weight: 300;
+      font-size: 48px;
+      line-height: 120%;
+
+      /* identical to box height, or 58px */
+      display: flex;
+      align-items: center;
+    }
+
+    > div {
+      width: 100%;
+      // background-color: antiquewhite;
+      position: relative;
+      z-index: 2;
+      height: auto;
+      margin-top: 40px;
+    }
+
+    &--image {
+      z-index: 1;
+    }
+
+    &--label {
+      position: absolute;
+      width: 950px;
+      height: 664px;
+      background-color: $gray-6;
+      left: 250px;
+      bottom: -92px;
+      border-top-right-radius: 80px;
+      z-index: -1;
+      text-align: end;
+      display: flex;
+      padding-top: 80px;
+
+      p {
+        font-weight: 400;
+        font-size: 20px;
+        max-width: 530px;
+        max-height: 504px;
+        padding-right: 40px;
+        line-height: 140%;
+        margin-left: auto;
+        text-align: start;
+
+        /* or 28px */
+        display: flex;
+        align-items: center;
+
+        /* Primary colors/6#3B3A3C */
+        color: #3b3a3c;
+      }
+    }
+  }
+
+  &__item {
+    margin-top: 172px;
+    width: 100%;
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h2 {
+        font-weight: 300;
+        font-size: 48px;
+        line-height: 120%;
+
+        /* identical to box height, or 58px */
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        /* Primary colors/Gradient/Sunset */
+        background: linear-gradient(225deg, #ff6a00 0%, #ee0979 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+      }
+
+      p {
+        max-width: 800px;
+
+        /* Heading/H6/Regular */
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 140%;
+
+        /* or 28px */
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        /* Primary colors/6#3B3A3C */
+        color: #3b3a3c;
+
+        /* Inside auto layout */
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+        margin-top: 20px;
+      }
+    }
+
+    ul {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      li {
+        margin-top: 40px;
+        height: 456px;
+        max-width: 580px;
+        border: 1px solid red;
+        border-radius: 30px;
+        overflow: hidden;
+
+        img {
+          max-height: 200px;
+          background-color: rebeccapurple;
+          width: 100%;
+          object-fit: cover;
+        }
+
+        h3 {
+          font-weight: 400;
+          font-size: 28px;
+          line-height: 120%;
+
+          /* identical to box height, or 34px */
+          display: flex;
+          align-items: center;
+
+          /* Primary colors/Gradient/Blue */
+          background: linear-gradient(215.9deg, #00c6ff 15.48%, #0072ff 110.47%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+          margin-top: 28px;
+        }
+
+        p {
+          font-weight: 400;
+          font-size: 18px;
+          margin-top: 16px;
+          line-height: 140%;
+
+          /* or 25px */
+          display: flex;
+          align-items: center;
+
+          /* Primary colors/6#3B3A3C */
+          color: #3b3a3c;
+        }
+
+        > div {
+          padding: 0 30px 30px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+/* stylelint-disable max-nesting-depth */
+@import '../../abstracts/';
+
+main {
+  background: $white-5;
+  overflow: hidden;
+}
+
+footer {
+  background: #fff !important;
+}
+
+.ibc-contact {
+  max-width: 128.4rem;
+  padding-left: 8rem;
+  padding-top: 6.2rem;
+  padding-bottom: 6.2rem;
+  position: relative;
+  z-index: 2;
+
+  &:after {
+    content: '';
+    background: #fff;
+    height: 100%;
+    width: 370%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+  }
+}
+
+.ibc__form {
+  padding: 0 0 0 4rem !important;
+  border-left: 1px solid #f0f2f5;
+}
+
+.call-form {
+  border: unset !important;
+  padding: 0 4rem 0 0 !important;
+}
