@@ -1,0 +1,26 @@
+/* stylelint-disable max-nesting-depth */
+@import '../../abstracts/';
+
+.ibc-map {
+  max-width: 128.4rem;
+  padding-left: 8rem;
+  padding-top: 6.2rem;
+  padding-bottom: 6.2rem;
+  position: relative;
+  z-index: 2;
+
+  &:after {
+    content: '';
+    background: #fff;
+    height: 100%;
+    width: 370%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+  }
+
+  &_title {
+    width: 100%;
+  }
+}

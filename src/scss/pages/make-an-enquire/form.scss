@@ -1,0 +1,57 @@
+/* stylelint-disable max-nesting-depth */
+@import '../../abstracts/';
+
+main {
+  background: $white-5;
+  overflow: hidden;
+}
+
+footer {
+  background: #fff !important;
+}
+
+.ibc-make {
+  max-width: 128.4rem;
+  padding-left: 8rem;
+  padding-top: 6.2rem;
+  padding-bottom: 6.2rem;
+  position: relative;
+  z-index: 2;
+
+  &:after {
+    content: '';
+    background: #fff;
+    height: 100%;
+    width: 370%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+  }
+
+  &:before {
+    content: url('../images/make-an-enquiry.png');
+    background: #fff;
+    position: absolute;
+    bottom: 0;
+    right: -25%;
+  }
+}
+
+.ibc__form {
+  width: 65% !important;
+  padding: 4rem !important;
+  background: #fff;
+  box-shadow: 0 2px 8px rgb(91 91 91 / 20%);
+  border-radius: 20px;
+}
+
+.ibc_info_form {
+  width: 35%;
+  padding: 6rem 18rem;
+}
+
+.call-form {
+  border-left: 1px solid #f0f2f5;
+  padding: 0 0 0 4rem !important;
+}

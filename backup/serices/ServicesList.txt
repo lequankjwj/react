@@ -1,0 +1,144 @@
+import Breadcrumb from '@components/primitive/Breadcrumb';
+import ArrowSmall from '@svg/arrow-small.svg';
+
+
+export default function ServicesList() {
+  return (
+    <section className="ibc-main">
+      <Breadcrumb></Breadcrumb>
+      <div className="ibc-services__base">
+        <div className="ibc-services__list">
+          <div className="ibc-services__wrapper">
+            <div className="ibc-services__description">
+              <div>
+                <h1>Reinventing The Future</h1>
+              </div>
+              <div>
+                <p>
+                  Our professionals assist businesses all around the world in resolving their
+                  pressing issues in all industries. We approach it with the same philosophy that
+                  has guided the business since its founding in 2009 - always seeking out novel
+                  answers to issues and tailoring those solutions to our clients rather than the
+                  other way around. Also, we approach every task with creativity and rigor thanks to
+                  our ambidextrous attitude, enabling our clients to have a beneficial influence on
+                  the world.
+                </p>
+              </div>
+            </div>
+
+            <div className="ibc-services__items">
+              <div className="ibc-services__title">
+                <h2>How We Can Help</h2>
+              </div>
+
+              <div className="ibc-services__all">
+                <div className="ibc-services__all--detail">
+                  <img src="/images/service-strategy.png" alt="" />
+                  <div className="ibc-services__all--description">
+                    <h3>Strategy</h3>
+                    <p>Ensure your business grow in the right direction.</p>
+                    <div>
+                      <a title="View more" href="/">
+                        <span>
+                          <ArrowSmall />
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className="ibc-services__all--detail">
+                  <img src="/images/operations-service.jpg" alt="" />
+                  <div className="ibc-services__all--description">
+                    <h3>Operations</h3>
+                    <p>Turn your ideas into action and action into value.</p>
+                    <div>
+                      <a title="View more" href="/">
+                        <span>
+                          <ArrowSmall />
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className="ibc-services__all--detail">
+                  <img src="/images/service-corporate-finance.jpg" alt="" />
+                  <div className="ibc-services__all--description">
+                    <h3>Corporate Finance</h3>
+                    <p>
+                      Connect with our best partners to meet specific needs and foster the growth.
+                    </p>
+                    <div>
+                      <a title="View more" href="/">
+                        <span>
+                          <ArrowSmall />
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className="ibc-services__all--detail">
+                  <img src="/images/people-organizational performance.jpg" alt="" />
+                  <div className="ibc-services__all--description">
+                    <h3>People & Organizational Performance </h3>
+                    <p>
+                      Connect with our best partners to meet specific needs and foster the growth.
+                    </p>
+                    <div>
+                      <a title="View more" href="/">
+                        <span>
+                          <ArrowSmall />
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className="ibc-services__all--detail">
+                  <img src="/images/governance-risk-compliance.jpg" alt="" />
+                  <div className="ibc-services__all--description">
+                    <h3>Governance, Risk & Compliance</h3>
+                    <p>Enhance internal controls and corporate assurance frameworks.</p>
+                    <div>
+                      <a title="View more" href="/">
+                        <span>
+                          <ArrowSmall />
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className="ibc-services__all--detail">
+                  <img src="/images/wealth-asset-management.jpg" alt="" />
+                  <div className="ibc-services__all--description">
+                    <h3>Governance, Risk & Compliance</h3>
+                    <p>Enhance internal controls and corporate assurance frameworks.</p>
+                    <div>
+                      <a title="View more" href="/">
+                        <span>
+                          <ArrowSmall />
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className="ibc-services__all--detail">
+                  <img src="/images/business-transformation.jpg" alt="" />
+                  <div className="ibc-services__all--description">
+                    <h3>Governance, Risk & Compliance</h3>
+                    <p>Enhance internal controls and corporate assurance frameworks.</p>
+                    <div>
+                      <a title="View more" href="/">
+                        <span>
+                          <ArrowSmall />
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

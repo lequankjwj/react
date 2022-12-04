@@ -1,0 +1,51 @@
+@import '@/scss/abstracts';
+
+.ibc-mega-menu {
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    column-gap: 3.4rem;
+  }
+
+  &__item {
+    li {
+      border-left: 1px solid $gray-3;
+      padding: 1.5rem 0;
+      padding-left: 0.8rem;
+      position: relative;
+
+      a {
+        color: $gray-2;
+        font-size: 1.6rem;
+        font-weight: 400;
+      }
+
+      &:after {
+        content: ' ';
+        position: absolute;
+        left: -1.5px;
+        top: -50%;
+        transform: translateY(50%);
+        z-index: 1;
+        height: 100%;
+        width: 4px;
+        background-color: $red-3;
+        display: none;
+        border-radius: 10px;
+      }
+
+      &:hover {
+        color: $red-3;
+        cursor: pointer;
+
+        &:after {
+          display: block;
+        }
+
+        a {
+          color: $red-3;
+        }
+      }
+    }
+  }
+}
