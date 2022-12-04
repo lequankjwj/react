@@ -1,0 +1,23 @@
+@import '@scss/abstracts';
+
+.ibc-breadcrumbs {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 140%;
+
+  .MuiBreadcrumbs-li p {
+    font-size: 1.6rem;
+  }
+
+  ol {
+    li {
+      a {
+        color: $black-1;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

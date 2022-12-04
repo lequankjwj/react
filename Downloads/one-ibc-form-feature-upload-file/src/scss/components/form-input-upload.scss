@@ -1,0 +1,54 @@
+@import '@/scss/abstracts';
+
+.ibc-input-upload {
+  display: flex;
+
+  &_btn {
+    display: block;
+    background: #f0f2f5;
+    border-radius: 8px;
+    text-align: center;
+    margin-right: 2rem;
+
+    label {
+      height: 64px;
+      cursor: pointer;
+      padding: 10px 8px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+      color: #858486;
+      margin: auto;
+      display: block;
+      width: 110px;
+
+      svg {
+        display: block;
+        margin: auto;
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  &_title {
+    width: 100;
+
+    h5 {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 140%;
+      display: flex;
+      align-items: center;
+      color: #3b3a3c;
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+      display: flex;
+      align-items: center;
+      color: #3b3a3c;
+    }
+  }
+}
