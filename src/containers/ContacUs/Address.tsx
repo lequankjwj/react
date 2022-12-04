@@ -1,20 +1,44 @@
+import { IOfficesContact } from '@/models/contact-us';
 import appStyle from '@/scss/pages/contact-us/address.scss';
 import HK from '@svg/HK.svg';
-import LT from '@svg/LT.svg';
 import MapIcon from '@svg/map.svg';
-import SG from '@svg/SG.svg';
 import TimeIcon from '@svg/time.svg';
-import US from '@svg/US.svg';
-import VN from '@svg/VN.svg';
+import { get } from 'lodash';
 
-export function Address() {
+
+
+interface ServicesListProps {
+  officesService :IOfficesContact
+}
+export function Address({ officesService }: ServicesListProps) {
+  const listServicesData = get(officesService, 'offices', []);
   return (
     <>
       <style jsx>{appStyle}</style>
       <section className="ibc_touch ibc-main ibc-contact">
         <div className="ibc-contact_list">
           <ul>
-            <li>
+          {listServicesData.length > 0 &&
+            listServicesData.map((item) => (    <li key={item.id}>
+              <div className="ibc-contact_list_item">
+                <div className="ibc-contact_list_item_title">
+                  <HK></HK>
+                  <p>{item.name}</p>
+                </div>
+                <div className="ibc-contact_list_item_address">
+                  <MapIcon></MapIcon>
+                  <p>
+                    Unit 1411, 14/Floor, Cosco Tower, 183 Queens Road Central, Sheung Wan, Hong
+                    Kong.
+                  </p>
+                </div>
+                <div className="ibc-contact_list_item_time">
+                  <TimeIcon></TimeIcon>
+                  <p>9AM - 6PM GMT+8 (Mon – Fri)</p>
+                </div>
+              </div>
+            </li>))}
+            {/* <li>
               <div className="ibc-contact_list_item">
                 <div className="ibc-contact_list_item_title">
                   <HK></HK>
@@ -108,7 +132,7 @@ export function Address() {
                   <p>9AM - 6PM GMT+8 (Mon – Fri)</p>
                 </div>
               </div>
-            </li>
+            </li> */}
           </ul>
         </div>
       </section>

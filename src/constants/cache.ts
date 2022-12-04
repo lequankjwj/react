@@ -22,3 +22,4 @@ export const CACHE_GET_UPDATE_SECTION = 'common-get-update-section';
 // contact page
 export const CACHE_MAIN_CONTACT_BANNER = 'contactus';
 export const CACHE_MAIN_CONTACTS_CUSTOMER_SERVICE = 'customer-service';
+export const CACHE_MAIN_CONTACTS_OFFICES_SERVICE = 'offices-service';

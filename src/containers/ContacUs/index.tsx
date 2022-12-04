@@ -5,13 +5,13 @@ import Banner from './Banner';
 import { ContactForm } from './ContactForm';
 import MapContact from './MapContact';
 
-export default function ContactUS({ banner, listService }: IContactsBannerProps) {
+export default function ContactUS({ banner, listService,officesService }: IContactsBannerProps) {
   return (
     <main>
       <style jsx>{Style}</style>
       <Banner banner={banner} />
       <ContactForm listServices={listService}></ContactForm>
-      <Address />
+      <Address officesService={officesService}/>
       <MapContact></MapContact>
     </main>
   );

@@ -6,8 +6,7 @@ interface ServicesListProps {
 }
 export default function CallUs({ listServices }: ServicesListProps) {
   const listServicesData = get(listServices, 'services', []);
-  console.log('tesst ', listServicesData);
-  // const [href, setHref] = useState({});
+ 
 
   return (
     <>
@@ -29,28 +28,30 @@ export default function CallUs({ listServices }: ServicesListProps) {
                     {item.contents.map((contents) => (
                       <div key={contents.content}>
                         {contents.content.split(',').map(([igg]) => igg).length > 1
-                          ? // contents.content.split(',', [1]).map((it, dex) => (
-                            //     <a href={contents.link.split(',', [1]).map((li) => li)} className="">
-                            //       {it}
-                            //     </a>
-                            //   )) &&
-                            contents.content.split(',').map((a) => a).length == 2
-                            ? contents.content.split(',', 1).map((b) => (
-                                <a href={contents.link.split(',', 2).map((li) => li)} className="">
-                                  {b}
-                                </a>
-                              ))
-                            : 451654
+                          ? contents.content.split(',').map((it, dex) => (
+                              <a
+                                key={dex}
+                                href={
+                                  dex == 0
+                                    ? contents.link
+                                        .split(',', [1])
+                                        .map((li) => Array.from([li]))
+                                        .slice(0)
+                                    : contents.link
+                                        .split(',')
+                                        .map((li) => Array.from([li]))
+                                        .slice(1)
+                                }
+                                className=""
+                              >
+                                {it}
+                              </a>
+                            ))
                           : contents.content.split(',').map((it) => (
-                              <a href={contents.link.split(',').map((li) => li)} className="">
-                                {it} jhbvufd
+                              <a href={contents.link.split(','[1]).map((li) => [li])} className="">
+                                {it}
                               </a>
                             ))}
-                        {/* {contents.content.split(',', [1]).map((it) => (
-                          <a href={contents.link.split(',', [1]).map((li) => li)} className="">
-                            {it}
-                          </a>
-                        ))} */}
                       </div>
                     ))}
                   </div>

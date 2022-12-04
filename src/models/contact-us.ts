@@ -25,8 +25,24 @@ interface IBannerContact {
     bannerContent: string;
   }[];
 }
+export interface IOfficesContact {
+  iss: string;
+  iat: number;
+  isSuccessful: string;
+  offices: {
+    id: string,
+    name:string,
+    address:string,
+    working: string,
+    lat: string,
+    lng: string
+  
+  }[];
+}
 
 export interface IContactsBannerProps {
   banner: IBannerContact;
   listService: IListCalls;
+  officesService:IOfficesContact;
 }
+

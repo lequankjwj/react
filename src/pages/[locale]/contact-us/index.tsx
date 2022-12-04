@@ -1,7 +1,7 @@
 import { MainLayout } from '@components/compound';
 import ContactUS from '@containers/ContacUs';
 
-import { CACHE_MAIN_CONTACTS_CUSTOMER_SERVICE, CACHE_MAIN_CONTACT_BANNER } from '@/constants';
+import { CACHE_MAIN_CONTACTS_CUSTOMER_SERVICE, CACHE_MAIN_CONTACTS_OFFICES_SERVICE, CACHE_MAIN_CONTACT_BANNER } from '@/constants';
 import { readCache } from '@/lib/readCache';
 import { IGetBanner } from '@/models';
 import withCommon from '@hoc/withCommon';
@@ -24,14 +24,15 @@ export const getServerSideProps = withCommon({
       readCache(CACHE_MAIN_CONTACT_BANNER) ??
         commonService.getBanner(reqDataGetBanner, CACHE_MAIN_CONTACT_BANNER),
       readCache(CACHE_MAIN_CONTACTS_CUSTOMER_SERVICE) ?? oneIbcContacts.getCustomerService(region),
+      readCache(CACHE_MAIN_CONTACTS_OFFICES_SERVICE) ?? oneIbcContacts.getOfficesService(region),
     ];
     const response: any = await Promise.allSettled(promises);
     const data = await response.map((item) =>
       item.status === 'fulfilled' ? item.value ?? [] : null,
     );
 
-    const ar = ['banner', 'listService'];
-    console.log('jfvb', data[1]);
+    const ar = ['banner', 'listService','officesService'];
+    console.log('jfvb', data[2]);
     return {
       props: {
         ...coverObj(ar, data),
